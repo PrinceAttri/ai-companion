@@ -38,7 +38,7 @@ export const Categories = ({
                 items-center
                 text-center
                 text-xs
-                md-text-sm
+                md:text-sm
                 px-2
                 md:px-4
                 py-2
@@ -48,8 +48,9 @@ export const Categories = ({
                 hover:opacity-75
                 transition
             `,
-                !categoryId ? "bg-primary/25" : "bg-primary/10"
-            )}>
+            !categoryId ? 'bg-primary/25' : 'bg-primary/10'
+            )}
+            >
                 Newest
             </button>
             {data.map((item) => (
@@ -60,7 +61,7 @@ export const Categories = ({
                     items-center
                     text-center
                     text-xs
-                    md-text-sm
+                    md:text-sm
                     px-2
                     md:px-4
                     py-2
@@ -70,8 +71,10 @@ export const Categories = ({
                     hover:opacity-75
                     transition
                 `,
-                    item.id === categoryId ? "bg-primary/25" : "bg-primary/10"
-                )}>
+                    item.id === categoryId ? 'bg-primary/25' : 'bg-primary/10'
+                )}
+                key={item.id}
+                >
                     {item.name}
                 </button>
             ))}
